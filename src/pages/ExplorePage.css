@@ -1,0 +1,139 @@
+/* explore page */
+
+.explore-page {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+/* page title */
+
+.explore-title {
+  margin-bottom: 0.5rem;
+
+  font-size: 1.75rem;
+
+  color: var(--color-heading);
+}
+
+.explore-subtitle {
+  max-width: 36rem;
+  margin-bottom: 2rem;
+
+  font-size: 1rem;
+
+  color: var(--color-text-muted);
+}
+
+/* filter controls */
+
+.explore-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border-light);
+  border-radius: 0.75rem;
+
+  background-color: var(--color-bg-alt);
+}
+
+.explore-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.explore-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: var(--color-text-muted);
+}
+
+.explore-select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.375rem;
+
+  font-size: 1rem;
+
+  background-color: var(--color-input-bg);
+  color: var(--color-text);
+}
+
+.explore-select:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+
+  border-color: var(--color-primary);
+}
+
+.explore-count {
+  margin: 0;
+
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  color: var(--color-text-muted);
+}
+
+/* activity grid */
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* empty state */
+
+.explore-empty {
+  padding: 3rem 1.5rem;
+  border: 1px dashed var(--color-border);
+  border-radius: 0.75rem;
+
+  text-align: center;
+}
+
+.explore-empty-text {
+  margin: 0;
+
+  font-size: 1rem;
+
+  color: var(--color-text-muted);
+}
+
+/* responsive layout */
+
+@media (min-width: 36rem) {
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .explore-controls {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  .explore-filter {
+    min-width: 10rem;
+  }
+
+  .explore-count {
+    margin-left: auto;
+
+    align-self: center;
+  }
+}
+
+@media (min-width: 60rem) {
+  .explore-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

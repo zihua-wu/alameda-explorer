@@ -1,0 +1,136 @@
+/* * ActivityCard */
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  border: 1px solid var(--color-border-light);
+  border-radius: 0.75rem;
+
+  background-color: var(--color-bg-alt);
+  box-shadow: 0 1px 3px var(--color-card-shadow);
+}
+
+/* card image */
+
+.activity-card-image-wrap {
+  overflow: hidden;
+
+  height: 12rem;
+}
+
+.activity-card-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* card body */
+
+.activity-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 1.25rem;
+}
+
+.activity-card-tag {
+  display: inline-block;
+  align-self: flex-start;
+
+  margin-bottom: 0.625rem;
+  padding: 0.2rem 0.625rem;
+  border-radius: 1rem;
+
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  background-color: var(--color-tag-bg);
+  color: var(--color-tag-text);
+}
+
+.activity-card-title {
+  margin-bottom: 0.5rem;
+
+  font-size: 1.125rem;
+
+  color: var(--color-heading);
+}
+
+.activity-card-desc {
+  flex: 1;
+
+  font-size: 0.9rem;
+  line-height: 1.5;
+
+  color: var(--color-text-muted);
+}
+
+/* card footer */
+
+.activity-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.activity-card-cost {
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  color: var(--color-accent);
+}
+
+.activity-card-btn {
+  display: inline-block;
+  
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 0.375rem;
+
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.activity-card-btn:hover,
+.activity-card-btn:focus {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+/* hover effect */
+
+@media (prefers-reduced-motion: no-preference) {
+  .activity-card {
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .activity-card:hover {
+    box-shadow: 0 4px 16px var(--color-card-shadow);
+    transform: translateY(-2px);
+  }
+
+  .activity-card-btn {
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .activity-card-image {
+    transition: transform 0.3s ease;
+  }
+
+  .activity-card:hover .activity-card-image {
+    transform: scale(1.05);
+  }
+}
